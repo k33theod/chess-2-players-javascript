@@ -275,14 +275,12 @@ function control_knight_move(x1,y1,x2,y2){
 function read_move(){
     var pos1 = document.getElementById("pos1").value;
     var pos2 = document.getElementById("pos2").value;
-    
     var lines = "87654321";
     var columns="ABCDEFGH";
     var x1=lines.indexOf(pos1[1]);
     var y1=columns.indexOf(pos1[0]);
     var x2= lines.indexOf(pos2[1]);
     var y2=columns.indexOf(pos2[0]);
-
     if (current_player == "BLACK" && chessboard[x1][y1].firstChild.color=="white"){
         console.log("Its blacks turn");
         return;
@@ -291,7 +289,6 @@ function read_move(){
         console.log("Its whites turn");
         return;
     }
-
     move(x1,y1,x2,y2);
     document.getElementById("player").innerHTML = current_player + " TURN";
 }
